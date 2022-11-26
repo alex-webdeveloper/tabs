@@ -1,8 +1,8 @@
 # tabs
 
-tabs(".info-header", ".info-header-tab", ".info-tabcontent", "flex");
+tabs(".info-header", ".info-header-tab", ".info-tabcontent");
 
-function tabs(ClassTabsParent, ClassTabs, ClassTabsContent, disp = "block") {
+function tabs(ClassTabsParent, ClassTabs, ClassTabsContent) {
 
     let tabsParent = document.querySelector(ClassTabsParent);
     let tabs = document.querySelectorAll(ClassTabs);
@@ -17,7 +17,7 @@ function tabs(ClassTabsParent, ClassTabs, ClassTabsContent, disp = "block") {
 
     function showTabsContent(index) {
         if (tabsContent[index].style.display == "none") {
-            tabsContent[index].style.display = disp;
+            tabsContent[index].style.display = "block";
         }
     };
 
